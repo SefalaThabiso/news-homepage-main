@@ -1,0 +1,306 @@
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --clr-primary-100: hsl(35, 77%, 62%);
+  --clr-primary-200: hsl(5, 85%, 63%);
+
+  /* Neutral */
+
+  --clr-netral-100: hsl(36, 100%, 99%);
+  --clr-netral-200: hsl(233, 8%, 79%);
+  --clr-netral-300: hsl(236, 13%, 42%);
+  --clr-netral-400: hsl(240, 100%, 5%);
+
+  /* font size */
+  --fs-body: 15px;
+
+  /* font weight */
+  --fw-light: 400;
+  --fw-semi-bold: 700;
+  --fw-bold: 800;
+
+  /* font family */
+  --ff-body: "Inter", sans-serif;
+
+  font-family: var(--ff-body);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.3rem;
+}
+
+.top-nav img {
+  width: 30px;
+}
+
+.toggle-menu {
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  height: 30px;
+}
+
+nav {
+  display: none;
+  background-color: var(--clr-netral-100);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding-top: 10rem;
+}
+
+nav ul a {
+  color: var(--clr-netral-400);
+  text-decoration: none;
+}
+
+/* column 1 */
+.column-1 h1 {
+  line-height: 1;
+  padding: 1rem 0;
+}
+
+.column-1 p {
+  padding-bottom: 1rem;
+}
+
+.column-1 a {
+  display: inline-block;
+  background-color: var(--clr-primary-200);
+  padding: 0.6rem 1rem;
+  color: var(--clr-netral-100);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* column 2 */
+.column-2 {
+  background-color: var(--clr-netral-400);
+  color: var(--clr-netral-100);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.column-2 h2 {
+  color: var(--clr-primary-100);
+}
+
+.column-2 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.headline {
+  position: relative;
+  padding: 1.2rem 0;
+}
+
+.headline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: var(--clr-netral-200);
+}
+
+.headline p {
+  font-weight: var(--fw-light);
+  color: var(--clr-netral-200);
+}
+
+/* column 3 */
+
+.column-3 ul {
+  padding: 0;
+  list-style: none;
+}
+
+.column-3 ul li {
+  height: 110px;
+  width: 326px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  margin-bottom: 1rem;
+  height: 100%;
+}
+
+.news img {
+  height: 100%;
+}
+
+.news h2 {
+  color: var(--clr-netral-200);
+}
+
+.news p {
+  color: var(--clr-netral-300);
+}
+
+.news .desc {
+  padding: 0 1rem;
+}
+
+@media (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 1rem;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+    position: static;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .toggle-menu {
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: row;
+
+    padding-top: 0;
+    z-index: 0;
+    height: fit-content;
+  }
+
+  .column-2 {
+    margin: 0;
+  }
+
+  .column-2 ul {
+    height: 100%;
+  }
+
+  .column-3 {
+    grid-column: span 2;
+  }
+
+  .column-3 ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1000px) {
+  .text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .text h1 {
+    font-size: 3rem;
+  }
+}

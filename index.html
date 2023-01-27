@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="top-nav">
+          <img src="./assets/images/logo.svg" alt="" />
+          <div class="toggle-menu" data-menu>
+            <img src="./assets/images/icon-menu.svg" alt="" />
+          </div>
+        </div>
+        <nav id="navigation">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="column-1">
+          <picture>
+            <source
+              media="(min-width: 700px)"
+              srcset="./assets/images/image-web-3-desktop.jpg"
+            />
+            <img
+              src="./assets/images/image-web-3-mobile.jpg"
+              alt="blocks picture"
+            />
+          </picture>
+          <div class="text">
+            <h1>The Bright Future of Web 3.0?</h1>
+            <div class="message">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="column-2">
+          <h2>New</h2>
+          <ul>
+            <li>
+              <div class="headline">
+                <h3>New Hydrogen VS Electric Cars</h3>
+                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+              </div>
+            </li>
+            <li>
+              <div class="headline">
+                <h3>The Downsides of AI Artistry</h3>
+                <p>
+                  What are the possible adverse effects of on-demand AI image
+                  generation?
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="headline">
+                <h3>Is VC Funding Drying Up?</h3>
+                <p>
+                  Private funding by VC firms is down 50% YOY. We take a look at
+                  what that means.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="column-3">
+          <ul>
+            <li>
+              <div class="news">
+                <img
+                  src="./assets/images/image-retro-pcs.jpg"
+                  alt="retro pcs"
+                />
+                <div class="desc">
+                  <h2>01</h2>
+                  <h3>Reviving Retro PCs</h3>
+                  <p>What happens when old PCs are given modern upgrades?</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="news">
+                <img src="./assets/images/image-top-laptops.jpg" alt="laptop" />
+                <div class="desc">
+                  <h2>02</h2>
+                  <h3>Top 10 Laptops of 2022</h3>
+                  <p>Our best picks for various needs and budgets.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="news">
+                <img
+                  src="./assets/images/image-gaming-growth.jpg"
+                  alt="gaming console"
+                />
+                <div class="desc">
+                  <h2>03</h2>
+                  <h3>The Growth of Gaming</h3>
+                  <p>How the pandemic has sparked fresh opportunities.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
